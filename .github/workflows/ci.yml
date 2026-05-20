@@ -30,7 +30,7 @@ jobs:
         DEBUG: "True"
         ALLOWED_HOSTS: "localhost"
       run: |
-        pytest
+        python manage.py test
 
 
   deploy:
