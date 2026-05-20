@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
   <h1>Category List</h1>
   <ul>
     {% for category in categories %}
-      <li>{{ category.name }}</li>
+      <li class="mb-2" style="list-style-type: none;"> 
+        <a href="{% url 'category_detail' category.id %}" class="btn btn-primary">
+          Перейти до: {{ category.name }}
+        </a>
+      </li>
     {% empty %}
       <li>No categories found.</li>
     {% endfor %}
